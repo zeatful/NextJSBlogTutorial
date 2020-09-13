@@ -1,5 +1,5 @@
 import Layout from '../../components/layout'
-import { getAllPostsIds, getPostData } from '../../lib/posts'
+import { getAllPostIds, getPostData } from '../../lib/posts'
 
 export default function Post({ postData }) {
     return (
@@ -14,7 +14,7 @@ export default function Post({ postData }) {
 }
 
 export async function getStaticPaths() {
-    const paths = getAllPostsIds
+    const paths = getAllPostIds()
     return {
         paths,
         fallback: false
